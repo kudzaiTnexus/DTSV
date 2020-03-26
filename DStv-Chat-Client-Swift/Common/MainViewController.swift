@@ -10,21 +10,26 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var activityView: UIActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+}
+
+extension MainViewController {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showActivityIndicator() {
+        activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+        activityView?.center = self.view.center
+        self.view.addSubview(activityView!)
+        activityView?.startAnimating()
     }
-    */
 
+    func hideActivityIndicator(){
+        if (activityView != nil){
+            activityView?.stopAnimating()
+        }
+    }
 }

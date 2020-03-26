@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+extension Dictionary {
+    var jsonObject: Data? {
+        do {
+            return try JSONSerialization.data(withJSONObject: self, options: [])
+        }
+        catch {
+            return nil
+        }
+    }
+}
+
+

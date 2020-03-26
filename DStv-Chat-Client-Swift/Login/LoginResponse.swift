@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct LoginResponse: Codable {
+    let result: Bool
+    let guid, firstName, error, lastName: String?
+}

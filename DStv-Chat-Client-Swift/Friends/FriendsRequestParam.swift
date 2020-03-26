@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct FriendsRequestParam: Encodable {
+    let name: String
+    let uniqueID: String
+}

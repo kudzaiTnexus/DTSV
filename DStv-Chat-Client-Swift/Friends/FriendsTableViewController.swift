@@ -9,82 +9,93 @@
 import UIKit
 
 class FriendsTableViewController: UITableViewController {
-
+    
+    private var param: FriendsRequestParam!
+    private let viewModel = FriendsListViewModel()
+    
+    private var friends: Friends = Friends(result: false, friends: []) {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    init(with param: FriendsRequestParam) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.param = param
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func registerTableViewCells() {
+        
+        tableView.register(FriendTableViewCell.self, forCellReuseIdentifier: "\(FriendTableViewCell.self)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.viewModel.fetchFriends(with: param) { (friends, error, status) in
+            if status {
+                self.friends = friends!
+            } else {
+                print("zvafa")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        navigationItem.hidesBackButton = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(onLogoutButtonTap))
+        
+        
+        self.tableView.separatorStyle = .none
+        self.title = "Friends"
+        self.registerTableViewCells()
     }
-
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.friends.count
     }
-
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let friendCell = tableView.dequeueReusableCell(withIdentifier: "\(FriendTableViewCell.self)", for: indexPath) as! FriendTableViewCell
+        
+        
+        friendCell.configureView(with: friends.friends[indexPath.row])
+        friendCell.infoButton.addTarget(self, action: #selector(onTapInfoButton), for: .touchUpInside)
+        
+        return friendCell
     }
-    */
+    
+    @objc func onTapInfoButton(sender: UIButton) {
+        
+        guard let cell = sender.superview?.superview as? FriendTableViewCell else {
+            return
+        }
+        
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        let detailsViewContoller = DetailsViewController(with: friends.friends[indexPath.row])
+        detailsViewContoller.modalPresentationStyle = .custom
+        self.present(detailsViewContoller, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    @objc func onLogoutButtonTap(sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

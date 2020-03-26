@@ -9,12 +9,35 @@
 /* Begin PBXBuildFile section */
 		76C93DD9242A606300A1C83D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93DD8242A606300A1C83D /* AppDelegate.swift */; };
 		76C93DDB242A606300A1C83D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93DDA242A606300A1C83D /* SceneDelegate.swift */; };
-		76C93DDD242A606300A1C83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93DDC242A606300A1C83D /* ViewController.swift */; };
-		76C93DE0242A606300A1C83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93DDE242A606300A1C83D /* Main.storyboard */; };
 		76C93DE2242A606400A1C83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C93DE1242A606400A1C83D /* Assets.xcassets */; };
-		76C93DE5242A606400A1C83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93DE3242A606400A1C83D /* LaunchScreen.storyboard */; };
 		76C93DF0242A606400A1C83D /* DStv_Chat_Client_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93DEF242A606400A1C83D /* DStv_Chat_Client_SwiftTests.swift */; };
 		76C93DFB242A606500A1C83D /* DStv_Chat_Client_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93DFA242A606500A1C83D /* DStv_Chat_Client_SwiftUITests.swift */; };
+		76C93E09242A607F00A1C83D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E08242A607F00A1C83D /* LoginViewController.swift */; };
+		76C93E10242A6ED100A1C83D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E0F242A6ED100A1C83D /* UIView+Extension.swift */; };
+		76C93E1A242B8C1000A1C83D /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */; };
+		76C93E1C242B94EA00A1C83D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E1B242B94EA00A1C83D /* LoginViewModel.swift */; };
+		76C93E1F242BA0EB00A1C83D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E1E242BA0EB00A1C83D /* User.swift */; };
+		76C93E23242BA68200A1C83D /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E22242BA68200A1C83D /* ServiceClient.swift */; };
+		76C93E25242BA6CF00A1C83D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E24242BA6CF00A1C83D /* NetworkService.swift */; };
+		76C93E27242BB18500A1C83D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E26242BB18500A1C83D /* LoginService.swift */; };
+		76C93E2B242BBC6200A1C83D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E2A242BBC6200A1C83D /* MainViewController.swift */; };
+		76C93E2D242BC05200A1C83D /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */; };
+		76C93E2F242BC0B100A1C83D /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E2E242BC0B100A1C83D /* Encodable+Extension.swift */; };
+		76C93E32242BCB0400A1C83D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E31242BCB0400A1C83D /* LoginResponse.swift */; };
+		76C93E36242BDDD500A1C83D /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E35242BDDD500A1C83D /* FriendsTableViewController.swift */; };
+		76C93E38242BE81900A1C83D /* FriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E37242BE81900A1C83D /* FriendsListViewModel.swift */; };
+		76C93E3A242BE85700A1C83D /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E39242BE85700A1C83D /* FriendsService.swift */; };
+		76C93E3C242BE8D500A1C83D /* FriendsRequestParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E3B242BE8D500A1C83D /* FriendsRequestParam.swift */; };
+		76C93E3E242BEB0B00A1C83D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E3D242BEB0B00A1C83D /* Friend.swift */; };
+		76C93E40242BF3AA00A1C83D /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E3F242BF3AA00A1C83D /* FriendTableViewCell.swift */; };
+		76C93E43242BFA0900A1C83D /* UIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E42242BFA0900A1C83D /* UIImage+Extention.swift */; };
+		76C93E47242C66C400A1C83D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E46242C66C400A1C83D /* DetailsViewController.swift */; };
+		76C93E4A242C6D6400A1C83D /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E49242C6D6400A1C83D /* DetailsView.swift */; };
+		76C93E4C242C828700A1C83D /* MemberOnlineStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E4B242C828700A1C83D /* MemberOnlineStatus.swift */; };
+		76C93E4E242C98DB00A1C83D /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E4D242C98DB00A1C83D /* UserDataView.swift */; };
+		76C93E52242CC16300A1C83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E4F242CC16300A1C83D /* LaunchScreen.storyboard */; };
+		76C93E53242CC16300A1C83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E50242CC16300A1C83D /* Main.storyboard */; };
+		76C93E54242CC16300A1C83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E51242CC16300A1C83D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +61,7 @@
 		76C93DD5242A606300A1C83D /* DStv-Chat-Client-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DStv-Chat-Client-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C93DD8242A606300A1C83D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C93DDA242A606300A1C83D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76C93DDC242A606300A1C83D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76C93DDF242A606300A1C83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76C93DE1242A606400A1C83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76C93DE4242A606400A1C83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76C93DE6242A606400A1C83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C93DEB242A606400A1C83D /* DStv-Chat-Client-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DStv-Chat-Client-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C93DEF242A606400A1C83D /* DStv_Chat_Client_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStv_Chat_Client_SwiftTests.swift; sourceTree = "<group>"; };
@@ -49,6 +69,32 @@
 		76C93DF6242A606500A1C83D /* DStv-Chat-Client-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DStv-Chat-Client-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C93DFA242A606500A1C83D /* DStv_Chat_Client_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStv_Chat_Client_SwiftUITests.swift; sourceTree = "<group>"; };
 		76C93DFC242A606500A1C83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C93E08242A607F00A1C83D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76C93E0F242A6ED100A1C83D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		76C93E1B242B94EA00A1C83D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		76C93E1E242BA0EB00A1C83D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76C93E22242BA68200A1C83D /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		76C93E24242BA6CF00A1C83D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		76C93E26242BB18500A1C83D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		76C93E2A242BBC6200A1C83D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		76C93E2E242BC0B100A1C83D /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		76C93E31242BCB0400A1C83D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		76C93E35242BDDD500A1C83D /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		76C93E37242BE81900A1C83D /* FriendsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewModel.swift; sourceTree = "<group>"; };
+		76C93E39242BE85700A1C83D /* FriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsService.swift; sourceTree = "<group>"; };
+		76C93E3B242BE8D500A1C83D /* FriendsRequestParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestParam.swift; sourceTree = "<group>"; };
+		76C93E3D242BEB0B00A1C83D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		76C93E3F242BF3AA00A1C83D /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		76C93E42242BFA0900A1C83D /* UIImage+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extention.swift"; sourceTree = "<group>"; };
+		76C93E46242C66C400A1C83D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		76C93E49242C6D6400A1C83D /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		76C93E4B242C828700A1C83D /* MemberOnlineStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOnlineStatus.swift; sourceTree = "<group>"; };
+		76C93E4D242C98DB00A1C83D /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
+		76C93E4F242CC16300A1C83D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76C93E50242CC16300A1C83D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		76C93E51242CC16300A1C83D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +145,16 @@
 		76C93DD7242A606300A1C83D /* DStv-Chat-Client-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				76C93E0E242A6EAB00A1C83D /* Common */,
+				76C93E0C242A609600A1C83D /* Details */,
+				76C93E0B242A608F00A1C83D /* Friends */,
+				76C93E0A242A608300A1C83D /* Login */,
 				76C93DD8242A606300A1C83D /* AppDelegate.swift */,
+				76C93E4F242CC16300A1C83D /* LaunchScreen.storyboard */,
+				76C93E50242CC16300A1C83D /* Main.storyboard */,
+				76C93E51242CC16300A1C83D /* ViewController.swift */,
 				76C93DDA242A606300A1C83D /* SceneDelegate.swift */,
-				76C93DDC242A606300A1C83D /* ViewController.swift */,
-				76C93DDE242A606300A1C83D /* Main.storyboard */,
 				76C93DE1242A606400A1C83D /* Assets.xcassets */,
-				76C93DE3242A606400A1C83D /* LaunchScreen.storyboard */,
 				76C93DE6242A606400A1C83D /* Info.plist */,
 			);
 			path = "DStv-Chat-Client-Swift";
@@ -126,6 +176,57 @@
 				76C93DFC242A606500A1C83D /* Info.plist */,
 			);
 			path = "DStv-Chat-Client-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		76C93E0A242A608300A1C83D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				76C93E08242A607F00A1C83D /* LoginViewController.swift */,
+				76C93E1B242B94EA00A1C83D /* LoginViewModel.swift */,
+				76C93E1E242BA0EB00A1C83D /* User.swift */,
+				76C93E26242BB18500A1C83D /* LoginService.swift */,
+				76C93E31242BCB0400A1C83D /* LoginResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		76C93E0B242A608F00A1C83D /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				76C93E35242BDDD500A1C83D /* FriendsTableViewController.swift */,
+				76C93E37242BE81900A1C83D /* FriendsListViewModel.swift */,
+				76C93E39242BE85700A1C83D /* FriendsService.swift */,
+				76C93E3B242BE8D500A1C83D /* FriendsRequestParam.swift */,
+				76C93E3D242BEB0B00A1C83D /* Friend.swift */,
+				76C93E3F242BF3AA00A1C83D /* FriendTableViewCell.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		76C93E0C242A609600A1C83D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				76C93E46242C66C400A1C83D /* DetailsViewController.swift */,
+				76C93E49242C6D6400A1C83D /* DetailsView.swift */,
+				76C93E4D242C98DB00A1C83D /* UserDataView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		76C93E0E242A6EAB00A1C83D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				76C93E0F242A6ED100A1C83D /* UIView+Extension.swift */,
+				76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */,
+				76C93E22242BA68200A1C83D /* ServiceClient.swift */,
+				76C93E24242BA6CF00A1C83D /* NetworkService.swift */,
+				76C93E2A242BBC6200A1C83D /* MainViewController.swift */,
+				76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */,
+				76C93E2E242BC0B100A1C83D /* Encodable+Extension.swift */,
+				76C93E42242BFA0900A1C83D /* UIImage+Extention.swift */,
+				76C93E4B242C828700A1C83D /* MemberOnlineStatus.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C93DE5242A606400A1C83D /* LaunchScreen.storyboard in Resources */,
+				76C93E53242CC16300A1C83D /* Main.storyboard in Resources */,
 				76C93DE2242A606400A1C83D /* Assets.xcassets in Resources */,
-				76C93DE0242A606300A1C83D /* Main.storyboard in Resources */,
+				76C93E52242CC16300A1C83D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +360,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C93DDD242A606300A1C83D /* ViewController.swift in Sources */,
+				76C93E38242BE81900A1C83D /* FriendsListViewModel.swift in Sources */,
+				76C93E47242C66C400A1C83D /* DetailsViewController.swift in Sources */,
+				76C93E23242BA68200A1C83D /* ServiceClient.swift in Sources */,
+				76C93E10242A6ED100A1C83D /* UIView+Extension.swift in Sources */,
+				76C93E09242A607F00A1C83D /* LoginViewController.swift in Sources */,
+				76C93E4A242C6D6400A1C83D /* DetailsView.swift in Sources */,
+				76C93E2F242BC0B100A1C83D /* Encodable+Extension.swift in Sources */,
+				76C93E2B242BBC6200A1C83D /* MainViewController.swift in Sources */,
+				76C93E54242CC16300A1C83D /* ViewController.swift in Sources */,
+				76C93E40242BF3AA00A1C83D /* FriendTableViewCell.swift in Sources */,
+				76C93E2D242BC05200A1C83D /* Dictionary+Extension.swift in Sources */,
+				76C93E3E242BEB0B00A1C83D /* Friend.swift in Sources */,
+				76C93E3A242BE85700A1C83D /* FriendsService.swift in Sources */,
+				76C93E3C242BE8D500A1C83D /* FriendsRequestParam.swift in Sources */,
+				76C93E25242BA6CF00A1C83D /* NetworkService.swift in Sources */,
+				76C93E1A242B8C1000A1C83D /* UITextField+Extension.swift in Sources */,
+				76C93E4C242C828700A1C83D /* MemberOnlineStatus.swift in Sources */,
+				76C93E43242BFA0900A1C83D /* UIImage+Extention.swift in Sources */,
+				76C93E27242BB18500A1C83D /* LoginService.swift in Sources */,
+				76C93E4E242C98DB00A1C83D /* UserDataView.swift in Sources */,
+				76C93E36242BDDD500A1C83D /* FriendsTableViewController.swift in Sources */,
+				76C93E1F242BA0EB00A1C83D /* User.swift in Sources */,
 				76C93DD9242A606300A1C83D /* AppDelegate.swift in Sources */,
 				76C93DDB242A606300A1C83D /* SceneDelegate.swift in Sources */,
+				76C93E1C242B94EA00A1C83D /* LoginViewModel.swift in Sources */,
+				76C93E32242BCB0400A1C83D /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +419,6 @@
 			targetProxy = 76C93DF7242A606500A1C83D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		76C93DDE242A606300A1C83D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76C93DDF242A606300A1C83D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		76C93DE3242A606400A1C83D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76C93DE4242A606400A1C83D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		76C93DFD242A606500A1C83D /* Debug */ = {
@@ -435,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRJX7NHZKF;
 				INFOPLIST_FILE = "DStv-Chat-Client-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRJX7NHZKF;
 				INFOPLIST_FILE = "DStv-Chat-Client-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

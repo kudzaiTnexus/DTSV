@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct User: Encodable {
+    let username: String
+    let password: String
+}

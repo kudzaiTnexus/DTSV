@@ -12,14 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setupView()
     }
-    
-    func setupView() {
-        
-    }
-
-
 }
 

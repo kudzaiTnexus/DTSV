@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Friends: Codable {
+    let result: Bool
+    let friends: [Friend]
+}
+
+struct Friend: Codable {
+    let firstName, lastName, alias, dateOfBirth: String
+    let imageURL: String
+    let status: String
+}
+

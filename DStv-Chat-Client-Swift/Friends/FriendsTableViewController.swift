@@ -50,11 +50,11 @@ class FriendsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(onLogoutButtonTap))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("logoutTitle", comment: ""), style: .done, target: self, action: #selector(onLogoutButtonTap))
         
         
         self.tableView.separatorStyle = .none
-        self.title = "Friends"
+        self.title = NSLocalizedString("friendsTitle", comment: "")
         self.registerTableViewCells()
     }
     

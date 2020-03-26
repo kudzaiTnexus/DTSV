@@ -41,7 +41,7 @@ class DetailsView: UIView {
         
         return stackView
     }()
-        
+    
     private let friendImage: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -75,7 +75,7 @@ class DetailsView: UIView {
         return stackView
     }()
     
-        // MARK: - View Lifecycle
+    // MARK: - View Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -99,7 +99,7 @@ class DetailsView: UIView {
     
 }
 
-    // MARK: - Setup Views
+// MARK: - Setup Views
 
 extension DetailsView {
     
@@ -147,10 +147,14 @@ extension DetailsView {
     
     func configureView(with friend: Friend) {
         friendImage.loadImage(from: friend.imageURL)
-        self.aliasView.configureView(with: "Alias", subTitle: friend.alias)
-        self.nameView.configureView(with: "Name", subTitle: friend.firstName)
-        self.lastNameView.configureView(with: "Lastname", subTitle: friend.lastName)
-        self.dateOfBirthView.configureView(with: "D.O.B", subTitle: friend.dateOfBirth)
+        self.aliasView.configureView(with: NSLocalizedString("aliasTitle", comment: ""),
+                                     subTitle: friend.alias)
+        self.nameView.configureView(with: NSLocalizedString("nameTitle", comment: ""),
+                                    subTitle: friend.firstName)
+        self.lastNameView.configureView(with: NSLocalizedString("lastNameTitle", comment: ""),
+                                        subTitle: friend.lastName)
+        self.dateOfBirthView.configureView(with: NSLocalizedString("dateOfBirthTitle", comment: ""),
+                                           subTitle: friend.dateOfBirth)
         
         self.statusView.configureView(with: friend.status)
     }

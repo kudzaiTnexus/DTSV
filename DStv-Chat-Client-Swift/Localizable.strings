@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  DStv-Chat-Client-Swift
+
+  Created by Kudzaiishe Mhou on 2020/03/26.
+  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
+*/
+
+// Login
+
+"usernamePlaceHolder" = "Enter Username";
+"passwordPlaceHolder" = "Enter Password";
+"loginButtonTitle" = "LOGIN";
+"version" = "V 0.1";
+
+// Friends
+"friendsTitle" = "Friends";
+"logoutTitle" = "logout";
+
+// Details
+"nameTitle" = "Name";
+"lastNameTitle" = "Lastname";
+"aliasTitle" = "Alias";
+"dateOfBirthTitle" = "D.O.B";

@@ -11,13 +11,13 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     
-    lazy var backdropView: UIView = {
+    private lazy var backdropView: UIView = {
         let bdView = UIView(frame: self.view.bounds)
         bdView.backgroundColor = UIColor.gray.withAlphaComponent(0.6)
         return bdView
     }()
     
-    lazy var menuView: DetailsView = {
+    private let menuView: DetailsView = {
         let detailsView = DetailsView(frame: .zero)
         return detailsView
     }()

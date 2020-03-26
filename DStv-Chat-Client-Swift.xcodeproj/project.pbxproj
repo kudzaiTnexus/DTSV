@@ -38,6 +38,8 @@
 		76C93E52242CC16300A1C83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E4F242CC16300A1C83D /* LaunchScreen.storyboard */; };
 		76C93E53242CC16300A1C83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E50242CC16300A1C83D /* Main.storyboard */; };
 		76C93E54242CC16300A1C83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E51242CC16300A1C83D /* ViewController.swift */; };
+		76C93E56242CC97D00A1C83D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E55242CC97D00A1C83D /* Localizable.strings */; };
+		76C93E58242CC9FE00A1C83D /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		76C93E4F242CC16300A1C83D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76C93E50242CC16300A1C83D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76C93E51242CC16300A1C83D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76C93E55242CC97D00A1C83D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				76C93DDA242A606300A1C83D /* SceneDelegate.swift */,
 				76C93DE1242A606400A1C83D /* Assets.xcassets */,
 				76C93DE6242A606400A1C83D /* Info.plist */,
+				76C93E55242CC97D00A1C83D /* Localizable.strings */,
 			);
 			path = "DStv-Chat-Client-Swift";
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				76C93E2E242BC0B100A1C83D /* Encodable+Extension.swift */,
 				76C93E42242BFA0900A1C83D /* UIImage+Extention.swift */,
 				76C93E4B242C828700A1C83D /* MemberOnlineStatus.swift */,
+				76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C93E53242CC16300A1C83D /* Main.storyboard in Resources */,
+				76C93E56242CC97D00A1C83D /* Localizable.strings in Resources */,
 				76C93DE2242A606400A1C83D /* Assets.xcassets in Resources */,
 				76C93E52242CC16300A1C83D /* LaunchScreen.storyboard in Resources */,
 			);
@@ -374,6 +381,7 @@
 				76C93E3E242BEB0B00A1C83D /* Friend.swift in Sources */,
 				76C93E3A242BE85700A1C83D /* FriendsService.swift in Sources */,
 				76C93E3C242BE8D500A1C83D /* FriendsRequestParam.swift in Sources */,
+				76C93E58242CC9FE00A1C83D /* NetworkReachability.swift in Sources */,
 				76C93E25242BA6CF00A1C83D /* NetworkService.swift in Sources */,
 				76C93E1A242B8C1000A1C83D /* UITextField+Extension.swift in Sources */,
 				76C93E4C242C828700A1C83D /* MemberOnlineStatus.swift in Sources */,

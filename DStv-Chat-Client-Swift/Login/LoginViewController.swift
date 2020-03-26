@@ -36,13 +36,13 @@ class LoginViewController: MainViewController {
         return imageView
     }()
     
-    private lazy var usernameTextField: UITextField = {
+    private let usernameTextField: UITextField = {
         
         let textField = UITextField(frame: CGRect.zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.tintColor = .gray
         textField.backgroundColor = .white
-        textField.placeholder = "Enter Username"
+        textField.placeholder = NSLocalizedString("usernamePlaceHolder", comment: "")
         textField.font = .systemFont(ofSize: 20)
         textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         textField.layer.cornerRadius = 15.0
@@ -57,13 +57,13 @@ class LoginViewController: MainViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    private let passwordTextField: UITextField = {
         
         let textField = UITextField(frame: CGRect.zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.tintColor = .gray
         textField.backgroundColor = .white
-        textField.placeholder = "Enter Password"
+        textField.placeholder = NSLocalizedString("passwordPlaceHolder", comment: "")
         textField.font = .systemFont(ofSize: 20)
         textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         textField.layer.cornerRadius = 15.0
@@ -79,7 +79,7 @@ class LoginViewController: MainViewController {
         return textField
     }()
     
-    private lazy var loginButton: UIButton = {
+    private let loginButton: UIButton = {
         
         let button = UIButton(type: .system)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -90,7 +90,7 @@ class LoginViewController: MainViewController {
         button.layer.cornerRadius = 20
         button.tintColor = .white
         button.backgroundColor = .orange
-        button.setTitle("LOGIN", for: .normal)
+        button.setTitle(NSLocalizedString("loginButtonTitle", comment: ""), for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         button.layer.shadowRadius = 2.0
         button.layer.shadowColor = UIColor.lightGray.cgColor
@@ -100,7 +100,7 @@ class LoginViewController: MainViewController {
         return button
     }()
     
-    private lazy var stackView: UIStackView = {
+    private let stackView: UIStackView = {
         
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -111,21 +111,21 @@ class LoginViewController: MainViewController {
         return stackView
     }()
     
-    private lazy var errorLabel: UILabel = {
+    private let errorLabel: UILabel = {
         
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12, weight: .ultraLight)
+        label.font = .systemFont(ofSize: 14, weight: .light)
         label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
     
-    private lazy var versionLabel: UILabel = {
+    private let versionLabel: UILabel = {
         
         let label = UILabel()
         label.font = .systemFont(ofSize: 10, weight: .ultraLight)
-        label.text = "V 0.1"
+        label.text = NSLocalizedString("version", comment: "")
         
         return label
     }()
@@ -211,6 +211,11 @@ extension LoginViewController {
     }
     
     @objc func onLoginButtonTap(sender: UIButton) {
+        
+        guard NetworkReachability.isInternetAvailable() else {
+            self.showOfflineAlert()
+            return
+        }
         
         self.errorText = ""
         

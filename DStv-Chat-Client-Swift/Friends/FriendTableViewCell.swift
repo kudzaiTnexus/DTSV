@@ -12,7 +12,7 @@ class FriendTableViewCell: UITableViewCell {
     
         // MARK: - View components
     
-    fileprivate let avatar: UIImageView = {
+    private let avatar: UIImageView = {
         
         let imageView = UIImageView()
         
@@ -30,7 +30,7 @@ class FriendTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    fileprivate let nameLabel: UILabel = {
+    private let nameLabel: UILabel = {
         
         let label = UILabel()
         label.textColor = .black
@@ -40,7 +40,7 @@ class FriendTableViewCell: UITableViewCell {
         return label
     }()
     
-    fileprivate let lastNameLabel: UILabel = {
+    private let lastNameLabel: UILabel = {
         
         let label = UILabel()
         label.textColor = .black
@@ -50,7 +50,7 @@ class FriendTableViewCell: UITableViewCell {
         return label
     }()
     
-     lazy var infoButton: UIButton = {
+    let infoButton: UIButton = {
         
         let button = UIButton(type: .system)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -72,7 +72,7 @@ class FriendTableViewCell: UITableViewCell {
         return button
     }()
     
-    fileprivate let verticalStackView: UIStackView = {
+    private let verticalStackView: UIStackView = {
         
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -82,7 +82,7 @@ class FriendTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    fileprivate let horizontalStackView: UIStackView = {
+    private let horizontalStackView: UIStackView = {
         
         let stackView = UIStackView()
         stackView.axis = .horizontal

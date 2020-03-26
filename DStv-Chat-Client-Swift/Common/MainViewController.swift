@@ -33,3 +33,13 @@ extension MainViewController {
         }
     }
 }
+
+extension MainViewController {
+    func showOfflineAlert() {
+        let offlineAlert = UIAlertController(title: "No Internet Connection",
+                                             message: "Please ensure you are connected to the internet",
+                                             preferredStyle: .alert)
+        offlineAlert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(offlineAlert, animated: true, completion: nil)
+    }
+}

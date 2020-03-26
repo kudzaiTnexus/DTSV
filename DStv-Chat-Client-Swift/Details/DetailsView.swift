@@ -69,7 +69,6 @@ class DetailsView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fill
-        stackView.spacing = -20
         stackView.alignment = .leading
         
         return stackView
@@ -86,11 +85,9 @@ class DetailsView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        friendImage.heightAnchor.constraint(equalToConstant: self.frame.size.height/1.5).isActive = true
+        self.friendImage.heightAnchor.constraint(equalToConstant: self.frame.size.height/1.5).isActive = true
         
-        UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveLinear, animations: {
-            self.stackView.alpha = 1.0
-        }, completion: nil)
+        self.animateViews()
     }
     
     required init?(coder: NSCoder) {
@@ -157,5 +154,41 @@ extension DetailsView {
                                            subTitle: friend.dateOfBirth)
         
         self.statusView.configureView(with: friend.status)
+    }
+}
+
+// MARK: - View Animations
+
+extension DetailsView {
+    func animateViews() {
+        stackView.axis = .vertical
+        
+        let animations = {
+            self.stackView.transform =  CGAffineTransform.identity
+            self.stackView.alpha = 1
+            
+            self.aliasView.alpha = 1
+            self.nameView.alpha = 1
+            self.lastNameView.alpha = 1
+            self.dateOfBirthView.alpha = 1
+            
+            self.layoutIfNeeded()
+        }
+        
+        stackView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        stackView.alpha = 0
+        
+        self.aliasView.alpha = 0
+        self.nameView.alpha = 0
+        self.lastNameView.alpha = 0
+        self.dateOfBirthView.alpha = 0
+        
+        UIView.animate(withDuration: 1.4,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity:0.7,
+                       options: .curveEaseInOut,
+                       animations: animations,
+                       completion: nil)
     }
 }

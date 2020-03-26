@@ -161,12 +161,12 @@ extension DetailsView {
 
 extension DetailsView {
     func animateViews() {
-        stackView.axis = .vertical
         
         let animations = {
             self.stackView.transform =  CGAffineTransform.identity
             self.stackView.alpha = 1
             
+            self.friendImage.alpha = 1
             self.aliasView.alpha = 1
             self.nameView.alpha = 1
             self.lastNameView.alpha = 1
@@ -178,6 +178,7 @@ extension DetailsView {
         stackView.transform = CGAffineTransform(scaleX: 0, y: 0)
         stackView.alpha = 0
         
+        self.friendImage.alpha = 0
         self.aliasView.alpha = 0
         self.nameView.alpha = 0
         self.lastNameView.alpha = 0

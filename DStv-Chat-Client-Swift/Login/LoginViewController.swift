@@ -193,7 +193,7 @@ extension LoginViewController {
         
         logoAvatarImage.translatesAutoresizingMaskIntoConstraints = false
         logoAvatarImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        logoAvatarImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
+        logoAvatarImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor, constant: -20).isActive = true

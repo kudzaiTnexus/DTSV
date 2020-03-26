@@ -80,6 +80,12 @@ class FriendsTableViewController: UITableViewController {
         return friendCell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsViewContoller = DetailsViewController(with: friends.friends[indexPath.row])
+        detailsViewContoller.modalPresentationStyle = .custom
+        self.present(detailsViewContoller, animated: true, completion: nil)
+    }
+    
     @objc func onTapInfoButton(sender: UIButton) {
         
         guard let cell = sender.superview?.superview as? FriendTableViewCell else {

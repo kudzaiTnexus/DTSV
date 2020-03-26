@@ -25,11 +25,13 @@ extension MainViewController {
         activityView?.center = self.view.center
         self.view.addSubview(activityView!)
         activityView?.startAnimating()
+        self.view.isUserInteractionEnabled = false
     }
 
     func hideActivityIndicator(){
         if (activityView != nil){
             activityView?.stopAnimating()
+            self.view.isUserInteractionEnabled = true
         }
     }
 }

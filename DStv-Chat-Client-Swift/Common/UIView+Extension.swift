@@ -19,6 +19,8 @@ extension UIView {
         animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 5, y: self.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 5, y: self.center.y))
         self.layer.add(animation, forKey: "position")
+        
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 }
 

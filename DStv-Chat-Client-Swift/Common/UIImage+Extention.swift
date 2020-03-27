@@ -28,7 +28,9 @@ extension UIImageView {
 
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
+                DispatchQueue.main.async {
                  self.image = UIImage(systemName: "exclamationmark.triangle.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
+                }
             }
 
             DispatchQueue.main.async {

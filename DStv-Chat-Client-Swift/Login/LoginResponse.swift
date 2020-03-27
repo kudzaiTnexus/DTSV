@@ -10,5 +10,6 @@ import Foundation
 
 struct LoginResponse: Codable {
     let result: Bool
-    let guid, firstName, error, lastName: String?
+    let error: String?
+    let guid, firstName, lastName: String
 }

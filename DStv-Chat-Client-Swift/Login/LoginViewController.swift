@@ -213,7 +213,8 @@ extension LoginViewController {
     @objc func onLoginButtonTap(sender: UIButton) {
         
         guard NetworkReachability.isInternetAvailable() else {
-            self.showOfflineAlert()
+            self.showErrorAlert(with: NSLocalizedString("offlineTitle", comment: ""),
+                                message: NSLocalizedString("offlineMessage", comment: ""))
             return
         }
         
@@ -224,12 +225,20 @@ extension LoginViewController {
             self.showActivityIndicator()
             
             self.viewModel.signIn(username: usernameTextField.text!,
-                                  password: passwordTextField.text!) { (data, error, bool) in
-                                    if bool {
+                                  password: passwordTextField.text!) { (data, error) in
+                                    guard let response = data else {
+                                        self.errorText = NSLocalizedString("errorNoDataReceived", comment: "")
+                                        return
+                                    }
+                                    
+                                    if response.result {
                                         
                                         self.hideActivityIndicator()
-                                        let friendsViewController = FriendsTableViewController(with: FriendsRequestParam(name: (data?.firstName)!, uniqueID: (data?.guid)!))
-                                        self.navigationController?.pushViewController(friendsViewController, animated: true)
+                                        let friendsViewController =
+                                            FriendsTableViewController(with: FriendsRequestParam(name: response.firstName,
+                                                                                                 uniqueID: response.guid))
+                                        self.navigationController?.pushViewController(friendsViewController,
+                                                                                      animated: true)
                                         
                                     } else {
                                         

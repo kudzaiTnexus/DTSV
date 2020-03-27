@@ -22,3 +22,10 @@
 "lastNameTitle" = "Lastname";
 "aliasTitle" = "Alias";
 "dateOfBirthTitle" = "D.O.B";
+
+// Error Messages
+
+"offlineTitle" = "No Internet Connection";
+"offlineMessage" = "Please ensure you are connected to the internet";
+"errorTitle" = "Connection error. Please select retry to try again";
+"errorNoDataReceived" = "Nil data receive, please try again";

@@ -1,14 +1,15 @@
 //
-//  MainViewController.swift
+//  UITableView+Extension.swift
 //  DStv-Chat-Client-Swift
 //
-//  Created by Kudzaiishe Mhou on 2020/03/25.
+//  Created by Kudzaiishe Mhou on 2020/03/27.
 //  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class MainTableViewController: UITableViewController {
 
     var activityView: UIActivityIndicatorView?
     
@@ -18,7 +19,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController {
+extension MainTableViewController {
     
     func showActivityIndicator() {
         activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
@@ -33,15 +34,5 @@ extension MainViewController {
             activityView?.stopAnimating()
             self.view.isUserInteractionEnabled = true
         }
-    }
-}
-
-extension MainViewController {
-    func showErrorAlert(with title: String, message: String) {
-        let offlineAlert = UIAlertController(title: title,
-                                             message: message,
-                                             preferredStyle: .alert)
-        offlineAlert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        self.present(offlineAlert, animated: true, completion: nil)
     }
 }

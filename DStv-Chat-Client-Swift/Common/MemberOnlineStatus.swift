@@ -49,13 +49,13 @@ class MemberOnlineView: UIView {
         didSet {
             switch status {
             case MemberOnlineStatus.away:
-                backgroundView.backgroundColor = UIColor.gray
+                backgroundView.backgroundColor = UIColor.yellow
             case MemberOnlineStatus.online:
                 backgroundView.backgroundColor = UIColor.green
             case MemberOnlineStatus.busy:
-                backgroundView.backgroundColor = UIColor.purple
+                backgroundView.backgroundColor = UIColor.red
             case .offline:
-                backgroundView.backgroundColor = UIColor.orange
+                backgroundView.backgroundColor = UIColor.lightGray
             }
         }
     }

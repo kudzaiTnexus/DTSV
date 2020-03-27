@@ -12,13 +12,13 @@ class LoginViewModel {
     
     private var loginService: LoginService = LoginServiceImplementation()
     
-    func signIn(username: String, password: String, completion: @escaping (LoginResponse?, NSError?, Bool) -> ()) {
+    func signIn(username: String, password: String, completion: @escaping (LoginResponse?, NSError?) -> ()) {
         
         let requestParams: User = User(username: username, password: password)
         
-        loginService.login(with: requestParams) { (data, error, bool) in
+        loginService.login(with: requestParams) { (data, error) in
             DispatchQueue.main.async {
-                completion(data, error, bool)
+                completion(data, error)
             }
         }
     }

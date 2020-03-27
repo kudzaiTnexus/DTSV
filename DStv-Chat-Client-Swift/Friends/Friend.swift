@@ -9,6 +9,7 @@
 import Foundation
 
 struct Friends: Codable {
+    let error: String?
     let result: Bool
     let friends: [Friend]
 }

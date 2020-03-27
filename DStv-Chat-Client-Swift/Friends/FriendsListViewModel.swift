@@ -12,10 +12,10 @@ class FriendsListViewModel {
     
     private var friendsService: FriendsService = FriendsServiceImplementation()
     
-    func fetchFriends(with param: FriendsRequestParam, completion: @escaping (Friends?, NSError?, Bool) -> ()) {
-        friendsService.fetchFriends(with: param.uniqueID, name: param.name) { (friends, error, status) in
+    func fetchFriends(with param: FriendsRequestParam, completion: @escaping (Friends?, NSError?) -> ()) {
+        friendsService.fetchFriends(with: param.uniqueID, name: param.name) { (friends, error) in
             DispatchQueue.main.async {
-                completion(friends, nil, true)
+                completion(friends, nil)
             }
         }
     }

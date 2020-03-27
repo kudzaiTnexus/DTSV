@@ -17,8 +17,6 @@
 		76C93E1A242B8C1000A1C83D /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */; };
 		76C93E1C242B94EA00A1C83D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E1B242B94EA00A1C83D /* LoginViewModel.swift */; };
 		76C93E1F242BA0EB00A1C83D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E1E242BA0EB00A1C83D /* User.swift */; };
-		76C93E23242BA68200A1C83D /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E22242BA68200A1C83D /* ServiceClient.swift */; };
-		76C93E25242BA6CF00A1C83D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E24242BA6CF00A1C83D /* NetworkService.swift */; };
 		76C93E27242BB18500A1C83D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E26242BB18500A1C83D /* LoginService.swift */; };
 		76C93E2B242BBC6200A1C83D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E2A242BBC6200A1C83D /* MainViewController.swift */; };
 		76C93E2D242BC05200A1C83D /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */; };
@@ -40,6 +38,8 @@
 		76C93E54242CC16300A1C83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E51242CC16300A1C83D /* ViewController.swift */; };
 		76C93E56242CC97D00A1C83D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76C93E55242CC97D00A1C83D /* Localizable.strings */; };
 		76C93E58242CC9FE00A1C83D /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */; };
+		76C93E64242DB71D00A1C83D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E63242DB71D00A1C83D /* UITableView+Extension.swift */; };
+		76C93E66242DB8A400A1C83D /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C93E65242DB8A400A1C83D /* ErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +76,6 @@
 		76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		76C93E1B242B94EA00A1C83D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		76C93E1E242BA0EB00A1C83D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		76C93E22242BA68200A1C83D /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
-		76C93E24242BA6CF00A1C83D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		76C93E26242BB18500A1C83D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		76C93E2A242BBC6200A1C83D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		76C93E51242CC16300A1C83D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		76C93E55242CC97D00A1C83D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		76C93E63242DB71D00A1C83D /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		76C93E65242DB8A400A1C83D /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +198,7 @@
 		76C93E0B242A608F00A1C83D /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				76C93E65242DB8A400A1C83D /* ErrorViewController.swift */,
 				76C93E35242BDDD500A1C83D /* FriendsTableViewController.swift */,
 				76C93E37242BE81900A1C83D /* FriendsListViewModel.swift */,
 				76C93E39242BE85700A1C83D /* FriendsService.swift */,
@@ -223,14 +224,13 @@
 			children = (
 				76C93E0F242A6ED100A1C83D /* UIView+Extension.swift */,
 				76C93E19242B8C1000A1C83D /* UITextField+Extension.swift */,
-				76C93E22242BA68200A1C83D /* ServiceClient.swift */,
-				76C93E24242BA6CF00A1C83D /* NetworkService.swift */,
 				76C93E2A242BBC6200A1C83D /* MainViewController.swift */,
 				76C93E2C242BC05200A1C83D /* Dictionary+Extension.swift */,
 				76C93E2E242BC0B100A1C83D /* Encodable+Extension.swift */,
 				76C93E42242BFA0900A1C83D /* UIImage+Extention.swift */,
 				76C93E4B242C828700A1C83D /* MemberOnlineStatus.swift */,
 				76C93E57242CC9FE00A1C83D /* NetworkReachability.swift */,
+				76C93E63242DB71D00A1C83D /* UITableView+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -369,12 +369,12 @@
 			files = (
 				76C93E38242BE81900A1C83D /* FriendsListViewModel.swift in Sources */,
 				76C93E47242C66C400A1C83D /* DetailsViewController.swift in Sources */,
-				76C93E23242BA68200A1C83D /* ServiceClient.swift in Sources */,
 				76C93E10242A6ED100A1C83D /* UIView+Extension.swift in Sources */,
 				76C93E09242A607F00A1C83D /* LoginViewController.swift in Sources */,
 				76C93E4A242C6D6400A1C83D /* DetailsView.swift in Sources */,
 				76C93E2F242BC0B100A1C83D /* Encodable+Extension.swift in Sources */,
 				76C93E2B242BBC6200A1C83D /* MainViewController.swift in Sources */,
+				76C93E66242DB8A400A1C83D /* ErrorViewController.swift in Sources */,
 				76C93E54242CC16300A1C83D /* ViewController.swift in Sources */,
 				76C93E40242BF3AA00A1C83D /* FriendTableViewCell.swift in Sources */,
 				76C93E2D242BC05200A1C83D /* Dictionary+Extension.swift in Sources */,
@@ -382,7 +382,6 @@
 				76C93E3A242BE85700A1C83D /* FriendsService.swift in Sources */,
 				76C93E3C242BE8D500A1C83D /* FriendsRequestParam.swift in Sources */,
 				76C93E58242CC9FE00A1C83D /* NetworkReachability.swift in Sources */,
-				76C93E25242BA6CF00A1C83D /* NetworkService.swift in Sources */,
 				76C93E1A242B8C1000A1C83D /* UITextField+Extension.swift in Sources */,
 				76C93E4C242C828700A1C83D /* MemberOnlineStatus.swift in Sources */,
 				76C93E43242BFA0900A1C83D /* UIImage+Extention.swift in Sources */,
@@ -394,6 +393,7 @@
 				76C93DDB242A606300A1C83D /* SceneDelegate.swift in Sources */,
 				76C93E1C242B94EA00A1C83D /* LoginViewModel.swift in Sources */,
 				76C93E32242BCB0400A1C83D /* LoginResponse.swift in Sources */,
+				76C93E64242DB71D00A1C83D /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

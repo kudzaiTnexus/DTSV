@@ -8,12 +8,18 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+//MARK: Retry
+protocol RetryDelegate: class {
+    func onRetryTap()
+}
+
+class FriendsTableViewController: MainTableViewController {
     
     private var param: FriendsRequestParam!
     private let viewModel = FriendsListViewModel()
+    private lazy var errorViewController = ErrorViewController()
     
-    private var friends: Friends = Friends(result: false, friends: []) {
+    private var friends: Friends = Friends(error: nil, result: false, friends: []) {
         didSet {
             tableView.reloadData()
         }
@@ -37,13 +43,7 @@ class FriendsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.viewModel.fetchFriends(with: param) { (friends, error, status) in
-            if status {
-                self.friends = friends!
-            } else {
-                print("zvafa")
-            }
-        }
+        self.fetchData()
     }
     
     override func viewDidLoad() {
@@ -52,12 +52,32 @@ class FriendsTableViewController: UITableViewController {
         navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("logoutTitle", comment: ""), style: .done, target: self, action: #selector(onLogoutButtonTap))
         
-        
+        self.errorViewController.delegate = self
         self.tableView.separatorStyle = .none
         self.title = NSLocalizedString("friendsTitle", comment: "")
         self.registerTableViewCells()
     }
     
+    func fetchData() {
+        self.hideErrorView()
+        self.showActivityIndicator()
+        
+        self.viewModel.fetchFriends(with: param) { (friends, error) in
+            
+            guard let friendsList = friends else {
+                self.showErrorView()
+                return
+            }
+            
+            if friendsList.result {
+                self.hideActivityIndicator()
+                self.friends = friends!
+            } else {
+                self.hideActivityIndicator()
+                self.showErrorView()
+            }
+        }
+    }
     
     // MARK: - Table view data source
     
@@ -95,7 +115,7 @@ class FriendsTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPath(for: cell) else {
             return
         }
-
+        
         let detailsViewContoller = DetailsViewController(with: friends.friends[indexPath.row])
         detailsViewContoller.modalPresentationStyle = .custom
         self.present(detailsViewContoller, animated: true, completion: nil)
@@ -103,5 +123,27 @@ class FriendsTableViewController: UITableViewController {
     
     @objc func onLogoutButtonTap(sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension FriendsTableViewController: RetryDelegate {
+    
+    func onRetryTap() {
+        self.fetchData()
+    }
+    
+    func showErrorView() {
+        self.addChild(errorViewController)
+        self.errorViewController.view.frame = view.bounds
+        self.view.addSubview(errorViewController.view)
+        self.view.bringSubviewToFront(errorViewController.view)
+        self.errorViewController.didMove(toParent: self)
+    }
+    
+    func hideErrorView() {
+        self.errorViewController.willMove(toParent: nil)
+        self.errorViewController.view.removeFromSuperview()
+        self.errorViewController.removeFromParent()
     }
 }

@@ -42,8 +42,6 @@ class ErrorViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .blue
         button.setImage(UIImage(systemName: "gobackward"), for: .normal)
-        button.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 80).isActive = true
         button.imageView?.contentMode = .scaleAspectFill
         button.setTitle("Retry", for: .normal)
         let imageSize: CGSize = button.imageView!.image!.size
@@ -53,10 +51,10 @@ class ErrorViewController: UIViewController {
                                               right: 0);
         let labelString = NSString(string: button.titleLabel?.text ?? "")
         let titleSize = labelString.size(withAttributes: [NSAttributedString.Key.font: button.titleLabel?.font as Any])
-        button.imageEdgeInsets = UIEdgeInsets(top: -15,
+        button.imageEdgeInsets = UIEdgeInsets(top: -35,
                                               left: 0,
                                               bottom: 0,
-                                              right: -(titleSize.width+10))
+                                              right: -(titleSize.width+5))
         
         button.addTarget(self, action: #selector(retryTapped), for: .touchUpInside)
         

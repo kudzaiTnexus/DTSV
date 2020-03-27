@@ -29,3 +29,4 @@
 "offlineMessage" = "Please ensure you are connected to the internet";
 "errorTitle" = "Connection error. Please select retry to try again";
 "errorNoDataReceived" = "Nil data receive, please try again";
+"showError" = "showError";

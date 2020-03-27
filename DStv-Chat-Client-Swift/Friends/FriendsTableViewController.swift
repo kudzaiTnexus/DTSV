@@ -52,14 +52,16 @@ class FriendsTableViewController: MainTableViewController {
         navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("logoutTitle", comment: ""), style: .done, target: self, action: #selector(onLogoutButtonTap))
         
-        self.errorViewController.delegate = self
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("showError", comment: ""), style: .done, target: self, action: #selector(onShowErrorTap(sender:)))
+        
         self.tableView.separatorStyle = .none
         self.title = NSLocalizedString("friendsTitle", comment: "")
         self.registerTableViewCells()
+        
+        self.errorViewController.delegate = self
     }
     
     func fetchData() {
-        self.hideErrorView()
         self.showActivityIndicator()
         
         self.viewModel.fetchFriends(with: param) { (friends, error) in
@@ -125,11 +127,15 @@ class FriendsTableViewController: MainTableViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func onShowErrorTap(sender: UIBarButtonItem) {
+        self.showErrorView()
+    }
 }
 
 extension FriendsTableViewController: RetryDelegate {
     
     func onRetryTap() {
+        self.hideErrorView()
         self.fetchData()
     }
     

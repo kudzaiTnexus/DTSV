@@ -22,5 +22,15 @@ extension UIView {
         
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
+    
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) {
+        DispatchQueue.main.async {
+            let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            self.layer.mask = mask
+        }
+    }
+    
 }
 

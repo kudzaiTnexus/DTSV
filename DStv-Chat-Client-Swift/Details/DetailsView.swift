@@ -44,7 +44,6 @@ class DetailsView: UIView {
     
     private let friendImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView
@@ -87,6 +86,9 @@ class DetailsView: UIView {
         super.layoutSubviews()
         
         self.friendImage.heightAnchor.constraint(equalToConstant: self.frame.size.height/1.5).isActive = true
+        
+        self.cornerRadius(20, corners: [.topLeft, .topRight])
+        self.friendImage.cornerRadius(20, corners: [.topLeft, .topRight])
         
         self.animateViews()
     }
@@ -142,7 +144,6 @@ extension DetailsView {
         dateOfBirthView.translatesAutoresizingMaskIntoConstraints = false
         dateOfBirthView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         
-        self.layer.cornerRadius = 20
     }
     
     func configureView(with friend: Friend) {

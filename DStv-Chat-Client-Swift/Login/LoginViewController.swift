@@ -226,18 +226,20 @@ extension LoginViewController {
             
             self.viewModel.signIn(username: usernameTextField.text!,
                                   password: passwordTextField.text!) { (data, error) in
-                                    guard let response = data else {
-                                        self.hideActivityIndicator()
-                                        self.errorText = NSLocalizedString("errorNoDataReceived", comment: "")
-                                        return
-                                    }
                                     
-                                    if response.result {
+                                    if let response = data {
                                         
                                         self.hideActivityIndicator()
+                                        
+                                        guard let name = response.firstName, let guid = response.guid else {
+                                            self.hideActivityIndicator()
+                                            self.errorText = NSLocalizedString("errorNoDataReceived", comment: "")
+                                            return
+                                        }
+                                        
                                         let friendsViewController =
-                                            FriendsTableViewController(with: FriendsRequestParam(name: response.firstName,
-                                                                                                 uniqueID: response.guid))
+                                            FriendsTableViewController(with: FriendsRequestParam(name: name,
+                                                                                                 uniqueID: guid))
                                         self.navigationController?.pushViewController(friendsViewController,
                                                                                       animated: true)
                                         

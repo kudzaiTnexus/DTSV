@@ -227,6 +227,7 @@ extension LoginViewController {
             self.viewModel.signIn(username: usernameTextField.text!,
                                   password: passwordTextField.text!) { (data, error) in
                                     guard let response = data else {
+                                        self.hideActivityIndicator()
                                         self.errorText = NSLocalizedString("errorNoDataReceived", comment: "")
                                         return
                                     }

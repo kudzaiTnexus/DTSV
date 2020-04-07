@@ -3,4 +3,5 @@
 Please use the following credentials :
 
 username: user
-password 1234
+
+password: 1234
